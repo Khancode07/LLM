@@ -1,0 +1,131 @@
+Hello! I am learning artificial intelligence. Language models learn
+patterns from text. A transformer predicts the next character in a
+sequence. Machine learning improves when a model learns from examples.
+Python helps us build and train neural networks. Data, training, and
+evaluation are important parts of AI.
+
+Artificial intelligence is a field of computer science. It helps
+computers find patterns, process information, and solve problems. A
+machine learning model learns from examples instead of following only
+fixed rules. Training data gives the model examples to learn from.
+During training, the model makes predictions and compares them with the
+correct answers. The difference between a prediction and the correct
+answer is measured by a loss function. The optimizer updates the model
+parameters to reduce the loss. A lower training loss can mean the model
+is learning patterns in its training data. However, a low loss does not
+always mean that the model understands language. A model must also be
+tested on new examples.
+
+A neural network contains layers of mathematical operations. Each layer
+transforms its input into a new representation. The parameters of a
+neural network are numbers that change during training. At the
+beginning, these parameters are often initialized with small random
+values. Training gradually changes the parameters based on the examples.
+The learning rate controls how large each update can be. A learning rate
+that is too high may make training unstable. A learning rate that is too
+low may make learning slow. The batch size controls how many training
+examples are processed at once. An epoch is one pass through the
+complete training dataset.
+
+Text can be represented as a sequence of tokens. A token may be a
+character, a word, or a piece of a word. A tokenizer converts text into
+token identifiers. A vocabulary is the set of tokens known to the
+tokenizer. A character tokenizer has a simple vocabulary made from
+individual characters. Character tokenization is easy to understand, but
+sequences can become long. A larger language model often uses subword
+tokens to represent text more efficiently. The tokenizer used for
+training must also be used when generating text.
+
+A transformer is a neural network architecture used for language
+modeling. It uses attention to combine information from different
+positions in a sequence. Self attention helps a token use information
+from earlier tokens. Causal attention prevents a language model from
+looking at future tokens while predicting the next token. Positional
+information tells the model where tokens appear in the sequence. Feed
+forward layers process the representations created by attention.
+Residual connections help information and gradients move through the
+network. Layer normalization can make training more stable. A
+decoder-only transformer predicts the next token from the tokens that
+came before it.
+
+To train a language model, we first prepare a clean text dataset. We
+encode the text with a tokenizer and create input and target sequences.
+The input contains tokens from the text. The target is shifted by one
+position, so each input position learns to predict the next token. The
+model returns a score for every possible next token. Cross entropy
+measures how well the predictions match the target tokens.
+Backpropagation calculates gradients for the model parameters. An
+optimizer uses those gradients to update the parameters.
+
+A good machine learning project should be easy to reproduce. We can set
+a random seed to make experiments more consistent. We should keep the
+source code organized into small modules. Configuration values belong in
+one place. Tests help us detect bugs before training. Logs record useful
+information such as training loss and elapsed time. A checkpoint stores
+the model parameters so training results can be used later. The
+tokenizer vocabulary should be saved with the model checkpoint. When
+loading a checkpoint, the model architecture and vocabulary must match
+the saved parameters.
+
+A graphics processing unit can speed up many neural network operations.
+PyTorch provides tensors and tools for building neural networks. A
+tensor is a multidimensional array of numbers. The device tells PyTorch
+whether a tensor is stored on the CPU or a supported GPU. Model
+parameters and input tensors must be on compatible devices. Training on
+a GPU can be faster, but a small model may not use all of its power.
+Memory usage depends on the model size, batch size, and sequence length.
+A smaller batch or shorter sequence can reduce memory use.
+
+Data quality is important for language modeling. Repeated examples can
+cause a model to memorize the same text. Typos and inconsistent
+formatting can make the data harder to learn from. Training data should
+be relevant to the task we want the model to perform. A small dataset is
+useful for learning how the training pipeline works. It is not enough to
+build a broadly knowledgeable assistant. A larger dataset should be
+collected carefully and checked for quality. We should respect
+copyright, privacy, and the terms that apply to source material. We
+should not include private information without permission.
+
+Evaluation helps us understand whether a model is improving. Training
+loss measures performance on the training examples. Validation loss
+measures performance on examples kept separate from training. If
+training loss falls while validation loss rises, the model may be
+overfitting. Overfitting means that the model has learned details of the
+training data that do not generalize well. We can reduce overfitting by
+using more varied data and a suitable model size. We should compare
+generated samples before and after training. A model may produce
+repetitive text when it has learned only a small dataset. Generation
+settings such as sampling temperature can change the variety of output.
+Greedy decoding always selects the token with the highest score.
+Sampling can produce more varied results, but it can also produce
+mistakes.
+
+A computer program follows instructions written by a developer. Python
+is a popular language for data science and machine learning. Variables
+store references to values. Functions group reusable instructions.
+Classes define objects that combine data and behavior. Modules organize
+code into separate files. A virtual environment keeps project
+dependencies separate. A package manager installs libraries into the
+selected environment. Automated tests check whether parts of the program
+behave as expected. Clear error messages make debugging easier.
+
+A data scientist asks questions, collects data, cleans it, and studies
+patterns. Statistics helps us summarize data and understand uncertainty.
+A chart can make trends easier to see. A table organizes values into
+rows and columns. A database stores information in a structured way. A
+search system retrieves documents that match a query. A retrieval
+augmented generation system can provide relevant documents to a language
+model. The quality of retrieved documents affects the final response. A
+model should distinguish evidence from guesses. When the information is
+missing, a reliable system should say so.
+
+Learning to build a language model takes patience. Start with a small
+experiment and verify that every part works. Read the loss values and
+inspect the generated text. Change one setting at a time so that results
+are easier to understand. Keep a record of each experiment. Save
+checkpoints regularly. Do not assume that a working program is already
+an intelligent assistant. A model needs suitable data, training,
+evaluation, and careful design. The purpose of this project is to
+understand how language models work from the inside. Step by step, we
+can improve the tokenizer, dataset, model, training loop, and text
+generation.
